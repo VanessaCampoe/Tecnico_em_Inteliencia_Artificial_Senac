@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setembro Amarelo: Florescer e Prosperar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos CSS em um único bloco */
+        :root {
+            --amarelo-claro: #FFFACD; /* Lemon Chiffon */
+            --amarelo-setembro: #FFD700; /* Gold */
+            --verde-menta: #E0F2F1; /* Teal A100 */
+            --azul-ceu: #E0F7FA; /* Cyan A100 */
+            --pessego-suave: #FFDAB9; /* Peach Puff */
+            --branco: #FFFFFF;
+            --cinza-escuro: #333333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: var(--verde-menta);
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header e Navegação */
+        header {
+            background: linear-gradient(to right, var(--amarelo-claro), var(--pessego-suave));
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8em;
+            color: var(--cinza-escuro);
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--cinza-escuro);
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--amarelo-setembro), var(--pessego-suave));
+            z-index: -1;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+            transform-origin: right;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        nav ul li a:hover {
+            color: var(--branco);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--amarelo-setembro) 0%, var(--pessego-suave) 50%, var(--azul-ceu) 100%);
+            color: var(--branco);
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: pulse 4s infinite alternate;
+        }
+
+        .hero-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .hero-content p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--branco);
+            color: var(--amarelo-setembro);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--amarelo-setembro);
+            color: var(--branco);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Seções de Conteúdo */
+        .about, .features {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about {
+            background-color: var(--branco);
+        }
+
+        .about h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: var(--amarelo-setembro);
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .features {
+            background-color: var(--verde-menta);
+        }
+
+        .features .container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background-color: var(--branco);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 30%;
+            min-width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .feature-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            color: var(--amarelo-setembro);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            color: var(--cinza-escuro);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--cinza-escuro);
+            color: var(--amarelo-claro);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        /* Animações */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.1); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.2; }
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero-content h2 {
+                font-size: 2.5em;
+            }
+            .features .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Setembro Amarelo: Florescer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Prevenção & IA</a></li>
+                    <li><a href="#">Meditação</a></li>
+                    <li><a href="#">Patrocinadores</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Você não está sozinho(a). Brilhe.</h2>
+                <p>Encontre apoio, esperança e ferramentas para uma vida plena.</p>
+                <button class="btn-primary">Comece Sua Jornada</button>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h3>Sobre o Setembro Amarelo e Nossa Missão</h3>
+                <p>Neste espaço, cultivamos a esperança e o bem-estar. Através da sabedoria da meditação, da alegria de viver e da prosperidade da mente, oferecemos um refúgio para todos.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-card">
+                    <h4>IA para o Bem-Estar</h4>
+                    <p>Descubra como a tecnologia pode ser uma aliada na saúde mental.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Práticas de Meditação</h4>
+                    <p>Encontre a paz interior com guias e exercícios simples.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Histórias de Luz</h4>
+                    <p>Inspire-se em jornadas de superação e alegria.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Setembro Amarelo: Florescer. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
