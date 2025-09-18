@@ -1,0 +1,15 @@
+as pd e o apelido , sao as aryas
+O que são arrays?
+
+"Array" (plural: arrays) significa vetor ou matriz de dados — uma estrutura usada para armazenar vários valores em uma única variável.
+
+Em Python, arrays geralmente vêm de bibliotecas como:
+
+list (listas do Python, que funcionam como arrays simples)
+
+numpy.array (arrays mais eficientes, usados em computação científica)
+
+pandas.Series ou pandas.DataFrame (usam arrays internamente)
+
+======= alt w para interrogaçao
+alt 92
