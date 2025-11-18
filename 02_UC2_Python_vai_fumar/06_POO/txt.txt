@@ -1,0 +1,1 @@
+venv aqui minha segunda venv e o nome do meu ambiente , posso ativar usando o Scripts maiusculo ou minusculo 
